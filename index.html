@@ -41,9 +41,11 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">   
 	<link rel="stylesheet" href="style.css"> 
-	<script src="scripts.js"></script>
-    <title>Регистрация на конференцию</title> 	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="jquery.js" type="text/javascript"></script>
+	<script src="jquery.maskedinput.js" type="text/javascript"></script>	
+	<script src="script.js"></script> 
+			
+    <title>Регистрация на конференцию</title>
     		
 </head>
 <body>
@@ -53,42 +55,50 @@
 			<input type="text" name="user_name" placeholder="Имя" required 
 			pattern="[А-Я][а-я]+"/>
 		</div>
+
 		<div class="line">
 			<input type="text" name="surname" placeholder="Фамилия" required 
 			pattern="[А-Я][а-я]+"/>
 		</div>
+
 		<div class="line">
 			<input type="text" name="father_name" placeholder="Отчество" required 
 			pattern="[А-Я][а-я]+"/>
 		</div>
+
 		<div class="line">
 			<label for="birthLabel">Дата рождения</label >
 			<input type="date" name="birth_date" placeholder="Дата рождения" required 
 			pattern="[0-9]{2}\.[0-9]{2}\.[0-9]{4}"/>
 		</div>
-		<div class="line">			
-			<label for="mail">Адрес электронной почты</label >
-			<input type="email" name="email" placeholder="" required />
+
+		<div class="line">	
+			<input type="email" name="email" placeholder="user@email.ru" required />
+			<small>Адрес электронной почты</small>
 		</div>
+
 		<div class="line">
-			<label for="numOfTel">Контактный номер</label >
-			<input type="tel" name="phone" id="phone" placeholder="+7 (000) 000-00-00" required/>
-		</div>		
+			<input type="text" id= "phone" placeholder="Контактный номер" required/>			
+		</div>
+
 		<div class="line">
 			<h2>Секция:</h2>
 			<div class="line">
 				<input type="radio" name="section" value="maths" id="section_0" checked />	
 				<label for="section_0">Математика</label>
 			</div>
+
 			<div class="line">
 				<input type="radio" name="section" value="physics" id="section_1" />	
 				<label for="section_0">Физика</label>
 			</div>
+			
 			<div class="line">
 				<input type="radio" name="section" value="informatics" id="section_2" />	
 				<label for="section_0">Информатика</label>
 			</div>
 		</div>
+
 		<div class="line">
 			<h2>Доклад:</h2>
 			<div class="line">
@@ -100,7 +110,7 @@
 				<label for="report_1">Да</label>
 			</div>
 		</div>
-		
+				
 		<div class="line report_line" style="display: none;">
 			<input type="text" name="report_name" placeholder="Название доклада"  required disabled/>
 		</div>
