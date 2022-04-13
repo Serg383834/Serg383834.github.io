@@ -105,17 +105,22 @@
 
 		<div class="line_radio">
 			<h1>Доклад:</h1>
-			<div class="line">
-				<input type="radio" name="report" value="no" id="report_0" checked />	
-				<label for="report_0">Нет</label>
-				<input type="radio" name="report" value="yes" id="report_1" />	
-				<label for="report_1">Да</label>
-			</div>
+			<input type="radio" name="report" value="no" id="report_0" checked />
+			<label for="report_0">Нет</label>
+			<input type="radio" name="report" value="yes" id="report_1" />
+			<label for="report_1">Да</label></div>
 		</div>
 				
 		<div class="line report_line" style="display: none;">
 			<input type="text" name="report_name" placeholder="Название доклада"  required disabled/>
+			<label for = "report">Тема Вашего доклада:</label><br>
+			<textarea name="report" id="report" cols="20" rows="3"></textarea>
 		</div>
+		<div class="line_radio">
+			<h1>Тема Вашего доклада:<h1>
+			<textarea name="report" id="report" cols="30" rows="3"></textarea>
+		</div>
+		
 		<div class="button">
 			<input type="submit" value="Зарегистрироваться" />
 		</div>
